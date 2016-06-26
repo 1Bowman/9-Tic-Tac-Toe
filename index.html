@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>9 Tic-Tac-Toe</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-XYCjB+hFAjSbgf9yKUgbysEjaVLOXhCgATTEBpCqT1R3jvG5LGRAK5ZIyRbH5vpX" crossorigin="anonymous">
+		<style>
+			.t3square {
+				line-height: 80px;
+				min-height: 80px;
+				height: 80px;
+			}
+			.mapsquare {
+				line-height: 40px;
+				min-height: 40px;
+				height: 40px;
+			}
+			table.main-board {
+				table-layout: fixed;
+				word-wrap: break-word;
+				overflow: hidden;
+			}
+			.mapsquare-initial-click {
+				background-color: orange;
+				color: white;
+				font-size: 200%;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="9tictactoe.js"></script>
+		<div class="container">
+			<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="myModal">
+  				<div class="modal-dialog modal-sm">
+    				<div class="modal-content">
+    					<div class="modal-body">
+      			 			<h1 id="modalText"></h1>
+      			 			<p id="modalSubText"><p>
+      			 			<br><p style="font-size: 80%;">Click away to close this dialog</p>
+      			 		</div>
+			    	</div>
+			  	</div>
+			</div>
+			<div class="row">
+				<div class="title">
+				  <h1>9 Tic-Tac-Toe <small id="subtitle">Not a substitute for human interaction</small></h1>
+				</div>
+			</div>
+			<hr>
+			<div class="row-fluid">
+				<div class="col-sm-8 col-md-6">
+					<table id="selectable" class="table main-board">
+						<tbody>
+							<tr style="height:80px;" id="1">
+								<td class="t3square" id="11"></td>
+								<td class="t3square" id="12" style="border-left: 3px solid #000; border-right: 3px solid #000;"></td>
+								<td class="t3square" id="13"></td>
+							</tr>
+							<tr style="height:80px;" id="2">
+								<td class="t3square h" id="21" style="border-top: 3px solid #000; border-bottom: 3px solid #000;"></td>
+								<td class="t3square h" id="22" style="border: 3px solid #000"></td>
+								<td class="t3square h" id="23" style="border-top: 3px solid #000; border-bottom: 3px solid #000;"></td>
+							</tr>
+							<tr style="height:80px;" id="3">
+								<td class="t3square" id="31"></td>
+								<td class="t3square" id="32" style="border-left: 3px solid #000; border-right: 3px solid #000;"></td>
+								<td class="t3square" id="33"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-sm-4 col-md-6">
+					<table id="side-map" class="table" style="table-layout: fixed; word-wrap: break-word;">
+						<tbody>
+							<tr id="m1">
+								<td class="mapsquare" id="m11"></td>
+								<td class="mapsquare" id="m12" style="border-left: 3px solid #000; border-right: 3px solid #000;"></td>
+								<td class="mapsquare" id="m13"></td>
+							</tr>
+							<tr id="m2">
+								<td class="mapsquare h" id="m21" style="border-top: 3px solid #000; border-bottom: 3px solid #000;"></td>
+								<td class="mapsquare" id="m22" style="border: 3px solid #000;"></td>
+								<td class="mapsquare h" id="m23" style="border-top: 3px solid #000; border-bottom: 3px solid #000;"></td>
+							</tr>
+							<tr id="m3">
+								<td class="mapsquare" id="m31"></td>
+								<td class="mapsquare" id="m32" style="border-left: 3px solid #000; border-right: 3px solid #000;"></td>
+								<td class="mapsquare" id="m33"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
